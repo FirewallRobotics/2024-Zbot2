@@ -184,6 +184,7 @@ public final class Constants {
     public static final double kReverseIndexSpeed = -.2;
 
     public static final double kTestVelocity = 100.0;
+    public static final double kWaitTimeDefault = 5.0;
   }
 
   public static final class UltrasonicConstants {

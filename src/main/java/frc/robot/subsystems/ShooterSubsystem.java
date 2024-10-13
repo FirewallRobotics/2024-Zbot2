@@ -27,6 +27,7 @@ public class ShooterSubsystem extends SubsystemBase {
 
   private double shootSpeakerSpeed = Constants.ShooterConstants.kShootSpeakerSpeed;
   private double shootAmpSpeed = Constants.ShooterConstants.kShootAmpSpeed;
+  public double shootWaitTime = Constants.ShooterConstants.kWaitTimeDefault;
 
   public static RelativeEncoder ShooterEncoder;
   public double finalVelocity = ShooterConstants.kTestVelocity;
@@ -81,8 +82,8 @@ public class ShooterSubsystem extends SubsystemBase {
     SmartDashboard.putNumber("Feed Forward Shooter:", kFF);
     SmartDashboard.putNumber("Max Output Shooter:", kMaxOutput);
     SmartDashboard.putNumber("Min Output Shooter:", kMinOutput);
+    SmartDashboard.putNumber("Shooting Wait Time", shootWaitTime);
 
-    SmartDashboard.putNumber("Testing Velocity", finalVelocity);
     // MasterShooterMotor.enableSoftLimit(CANSparkMax.SoftLimitDirection.kForward,
     // true);
     // MasterShooterMotor.enableSoftLimit(CANSparkMax.SoftLimitDirection.kReverse,
